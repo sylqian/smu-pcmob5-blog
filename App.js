@@ -12,6 +12,7 @@ const Stack = createStackNavigator();
 export default function App() {
   const [loading, setloading] = useState(true)
   const [signedIn, setSignedIn] = useState(false)
+  const [errorText, setErrorText] = useState(false)
 
   async function loadToken() {
     const token = await AsyncStorage.getItem("token");
